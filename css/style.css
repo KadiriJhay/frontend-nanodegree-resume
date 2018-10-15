@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #2a86cc;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #4d4848;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,7 +42,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #505559;
   line-height: 22px;
 }
 
@@ -80,12 +80,13 @@ h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 17px;
   color: #333;
   line-height: 21px;
 }
 
 a {
+  font-size: 20px;
   color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
@@ -100,16 +101,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #2a86cc;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #2a86cc;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #3da2f0;
 }
 
 .white-text {
@@ -197,9 +198,9 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
+  /* .welcome-message {
     display: none;
-  }
+  } */
 }
 
 #map {

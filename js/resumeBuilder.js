@@ -3,18 +3,18 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-    "name" : "Jude Kadiri",
-    "role" : "Web Developer",
-    "contacts" : {
-        "mobile": "07064970956",
-        "email": "kadirijude53@gmail.com",
-        "github": "kadirijhay",
-        "twitter": "@kadirijhay",
-        "location": "Ibadan, Nigeria"
+    name : "Jude Kadiri",
+    role : "Web Developer",
+    contacts : {
+        mobile: "07064970956",
+        email: "kadirijude53@gmail.com",
+        github: "kadirijhay",
+        twitter: "@kadirijhay",
+        location: "Ibadan, Nigeria"
     },
-    "welcomeMessage": "Hey! I'm Jude and I'm a Web Developer and I've been at it for 2 years. I know a little of HTML/CSS/JavaScript/JQuery, I build cool websites that are fully resposive! Feel free to check my Resume or shoot me an Email.",
-    "skills": ["HTML", "CSS", "JQuery", "Solving Problems"],
-    "biopic": "images/jude.jpg"
+    welcomeMessage: "Hey! I'm Jude and I'm a Web Developer and I've been at it for 2 years. I know a little of HTML/CSS/JavaScript/JQuery, I build cool websites that are fully resposive! Feel free to check my Resume or shoot me an Email.",
+    skills: ["HTML", "CSS", "JQuery", "Solving Problems"],
+    biopic: "images/jude.jpg"
 };
 
 bio.display = function() {
@@ -30,68 +30,62 @@ bio.display = function() {
 
     $("#header").append(formattedName);
     $("#header").append(formattedRole);
-    $("#topContacts").append(formattedMobile);
-    $("#topContacts").append(formattedEmail);
-    $("#topContacts").append(formattedGithub);
-    $("#topContacts").append(formattedTwitter);
-    $("#topContacts").append(formattedLocation);
-
-    $("#footerContacts").append(formattedMobile);
-    $("#footerContacts").append(formattedEmail);
-    $("#footerContacts").append(formattedGithub);
-    $("#footerContacts").append(formattedTwitter);
-    $("#footerContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedTwitter);
+    $("#topContacts, #footerContacts").append(formattedLocation);
 
     $("#header").append(formattedMessage);
     $("#header").append(formattedPic);
 
     $("#header").append(HTMLskillsStart);
     
-    for (skill in bio.skills) {
+    for (skill = 0; skill <= bio.skills.length; skill++) {
         var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 
         $("#skills").append(formattedSkills);
-    }
+    };
 };
 bio.display();
 
 var education = {
-    "schools": [
+    schools: [
         {
-            "name": "Ladoke Akintola University of Technology",
-            "location": "Ogbomoso, Nigeria",
-            "degree": "BTech Engr",
-            "majors": ["Agricultural Engineering"],
-            "dates": "2011 - 2016",
-            "url": "lautech.edu.ng"
+            name: "Ladoke Akintola University of Technology",
+            location: "Ogbomoso, Nigeria",
+            degree: "BTech Engr",
+            majors: ["Agricultural Engineering"],
+            dates: "2011 - 2016",
+            url: "lautech.edu.ng"
         },
         {
-            "name": "University of Bristol",
-            "location": "Bristol, UK",
-            "degree": "MSc",
-            "majors": ["Computer Science"],
-            "dates": "2018 - 2019",
-            "url": "bristol.ac.uk"
+            name: "University of Bristol",
+            location: "Bristol, UK",
+            degree: "MSc",
+            majors: ["Computer Science"],
+            dates: "2018 - 2019",
+            url: "bristol.ac.uk"
         }
     ],
-    "onlineCourses": [
+    onlineCourses: [
         {
-            "title": "Front-End Web Developer Nanodegree",
-            "school": "Udacity",
-            "dates": "August 2018 - October 2018",
-            "url": "udacity.com"
+            title: "Front-End Web Developer Nanodegree",
+            school: "Udacity",
+            dates: "August 2018 - October 2018",
+            url: "udacity.com"
         },
         {
-            "title": "Intro to Programming Nanodegree",
-            "school": "Udacity",
-            "dates": "August 2018 - December 2018",
-            "url": "udacity.com"
+            title: "Intro to Programming Nanodegree",
+            school: "Udacity",
+            dates: "August 2018 - December 2018",
+            url: "udacity.com"
         },
         {
-            "title": "Android Development: User Basics",
-            "school": "Udacity",
-            "dates": "July 2017 - September 2017",
-            "url": "udacity.com"
+            title: "Android Development: User Basics",
+            school: "Udacity",
+            dates: "July 2017 - September 2017",
+            url: "udacity.com"
         }
     ]
 };
@@ -137,25 +131,25 @@ education.display = function() {
 education.display();
 
 var work = {
-    "jobs": [
+    jobs: [
         {
-            "employer": "Redlynch Agricultural Engineering",
-            "title": "Senior Engineer",
-            "location": "UK", 
-            "dates": "2017 - present",
-            "description": "Redlynch Agricuntural Engineering is a firm located in the United Kingdom. It deals with Farm Machineries ranging from tractors, sprayer, harvesters, etc. My job as the senior Engineer is to oversee the overall state and condition of the Machines and to assign duties to Junior Engineers in making sure each Machines are properly accounted for."
+            employer: "Redlynch Agricultural Engineering",
+            title: "Senior Engineer",
+            location: "UK", 
+            dates: "2017 - present",
+            description: "Redlynch Agricuntural Engineering is a firm located in the United Kingdom. It deals with Farm Machineries ranging from tractors, sprayer, harvesters, etc. My job as the senior Engineer is to oversee the overall state and condition of the Machines and to assign duties to Junior Engineers in making sure each Machines are properly accounted for."
         },
         {
-            "employer": "Udacity",
-            "title": "Web Developer",
-            "location": "Califonia", 
-            "dates": "2018 - present",
-            "description": "Udacity is a for-profit educational organization founded by Sebastian Thrun, David Stavens, and Mike Sokolsky offering massive open online courses (MOOCs). According to Thrun, the origin of the name Udacity comes from the company's desire to be \"audacious for you, the student\". My role as a Web Devoloper is to make updates to and maintain the Udacity's Website."
+            employer: "Udacity",
+            title: "Web Developer",
+            location: "Califonia", 
+            dates: "2018 - present",
+            description: "Udacity is a for-profit educational organization founded by Sebastian Thrun, David Stavens, and Mike Sokolsky offering massive open online courses (MOOCs). According to Thrun, the origin of the name Udacity comes from the company's desire to be \"audacious for you, the student\". My role as a Web Devoloper is to make updates to and maintain the Udacity's Website."
         }
-    ]  
+    ]
 };
 
-function displayWork() {
+work.display = function() {
     for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
@@ -173,21 +167,21 @@ function displayWork() {
         $(".work-entry:last").append(formattedDescription);
     }
 };
-displayWork();
+work.display();
 
 var projects =  {
-    "projects": [
+    projects: [
         {
-            "title": "Pixel Lab", 
-            "dates": "June - July 2018",
-            "description": "Pixel lab is a project I did after taking a course on Udacity. It was built using JQuery and JavaScript which loops through table cells tow and column creating a grid of cell spaces. It is a grid of blocks that allows you build what you want just like a computer game. To play, first create your building environment by selecting the number of rows and columns, then pick a colour of your choice and begin building by taping the cell spaces.",
-            "images": ["images/pixel.png", "images/pixel.png"]
+            title: "Pixel Lab", 
+            dates: "June - July 2018",
+            description: "Pixel lab is a project I did after taking a course on Udacity. It was built using JQuery and JavaScript which loops through table cells tow and column creating a grid of cell spaces. It is a grid of blocks that allows you build what you want just like a computer game. To play, first create your building environment by selecting the number of rows and columns, then pick a colour of your choice and begin building by taping the cell spaces.",
+            images: ["images/pixel.png", "images/pixel.png"]
         },
         {
-            "title": "JhayTech.com", 
-            "dates": "August 2018",
-            "description": "JhayTech.com is a website I built after completing my Front-End Web Developer course on Udacity. On the first day of the project, I spent about 14 hours building the website with HTML and CSS only which I later called version 1 after I built another version using Bootstrap CSS, JavaScript and JQuery. I did a research on Bootstrap frame which I used in coming up with something really beautiful and it made my work much easier as I need not write much codes.",
-            "images": ["images/jhaytech1.png", "images/jhaytech2.png"]
+            title: "JhayTech.com", 
+            dates: "August 2018",
+            description: "JhayTech.com is a website I built after completing my Front-End Web Developer course on Udacity. On the first day of the project, I spent about 14 hours building the website with HTML and CSS only which I later called version 1 after I built another version using Bootstrap CSS, JavaScript and JQuery. I did a research on Bootstrap frame which I used in coming up with something really beautiful and it made my work much easier as I need not write much codes.",
+            images: ["images/jhaytech1.png", "images/jhaytech2.png"]
         }
     ]
 };
