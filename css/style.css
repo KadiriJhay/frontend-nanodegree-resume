@@ -195,12 +195,14 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
+  #skills-h3,
   .biopic {
     width: 150px;
+    display: block;
   }
-  /* .welcome-message {
+  .welcome-message {
     display: none;
-  } */
+  }
 }
 
 #map {
