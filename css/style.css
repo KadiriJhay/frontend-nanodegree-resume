@@ -40,8 +40,8 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
+  /* font-style: italic; */
+  font-size: 22px;
   color: #505559;
   line-height: 22px;
 }
@@ -105,11 +105,11 @@ a {
   display: none;
 }
 
-.orange {
+.blue {
   background-color: #2a86cc;
 }
 
-.orange-text {
+.blue-text {
   color: #3da2f0;
 }
 

@@ -91,7 +91,7 @@ var education = {
 };
 
 education.display = function() {
-    for (item in education.schools) {
+    for (item = 0; item < education.schools.length; item++) {
         $("#education").append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace("%data%", education.schools[item].name);
@@ -106,7 +106,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedLocation);
 
         if (education.schools[item].majors.length > 0) {
-            for (major in education.schools[item].majors) {
+            for (major = 0; major < education.schools[item].majors.length; major++) {
                 var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[item].majors[major]);
                 $(".education-entry:last").append(formattedMajors);
             };
@@ -114,7 +114,7 @@ education.display = function() {
     }
 
     $("#education").append(HTMLonlineClasses);
-    for (course in education.onlineCourses) {
+    for (course = 0; course < education.onlineCourses.length; course++) {
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
         var formattedTitleSchool = formattedTitle + formattedSchool;
@@ -150,7 +150,7 @@ var work = {
 };
 
 work.display = function() {
-    for (job in work.jobs) {
+    for (job = 0; job < work.jobs.length; job++) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -187,7 +187,7 @@ var projects =  {
 };
 
 function displayProjects() {
-    for (project in projects.projects) {
+    for (project = 0; project < projects.projects.length; project++) {
         $("#projects").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -199,7 +199,7 @@ function displayProjects() {
         $(".project-entry:last").append(formattedDescription);
 
         if(projects.projects[project].images.length > 0) {
-            for (image in projects.projects[project].images) {
+            for (image = 0; image < projects.projects[project].images.length; image++) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedImage);
             };
